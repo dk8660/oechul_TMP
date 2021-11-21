@@ -1,0 +1,12 @@
+extends base.pug
+include mixins/matchingResult
+
+block head 
+    title Result
+
+block content 
+    h1 Result
+    h2 Matching Result:
+    +matchingResult(info)
+    
+    a(class='button' href='/') Home
