@@ -58,6 +58,14 @@ class Survey extends Component {
           <NoSsr>
             <StyledTextField label="Name" variant="outlined" id="deterministic-outlined-input" />
           </NoSsr>
+          <p> - 전공 - </p>
+          <NoSsr>
+            <StyledTextField label="major" variant="outlined" id="deterministic-outlined-input" />
+          </NoSsr>
+          <p> - 학번 - </p>
+          <NoSsr>
+            <StyledTextField label="StudentNumber" variant="outlined" id="deterministic-outlined-input" />
+          </NoSsr>
           <div>
             <p> - 성별 - </p>
             <Manbutton></Manbutton>&nbsp;
@@ -79,7 +87,30 @@ class Survey extends Component {
             <Ironbutton></Ironbutton>&nbsp;
           </div>
           <div className="Category_mati">
-            <p> - MBTI - </p>
+            <p> - 나의 MBTI - </p>
+            &nbsp;<ISTJ></ISTJ>&nbsp;
+            <ISFJ></ISFJ>&nbsp;
+            <INFJ></INFJ>&nbsp;
+            <INTJ></INTJ>
+            <br />
+            &nbsp;<ISTP></ISTP>&nbsp;
+            <ISFP></ISFP>&nbsp;
+            <INFP></INFP>&nbsp;
+            <INTP></INTP>
+            <br />
+            &nbsp;<ESTP></ESTP>&nbsp;
+            <ESFP></ESFP>&nbsp;
+            <ENFP></ENFP>&nbsp;
+            <ENTP></ENTP>
+            <br />
+            &nbsp;<ESTJ></ESTJ>&nbsp;
+            <ESFJ></ESFJ>&nbsp;
+            <ENFJ></ENFJ>&nbsp;
+            <ENTJ></ENTJ>
+          </div >
+
+          <div className="Category_mati">
+            <p> - 상대 MBTI - </p>
             &nbsp;<ISTJ></ISTJ>&nbsp;
             <ISFJ></ISFJ>&nbsp;
             <INFJ></INFJ>&nbsp;
@@ -101,18 +132,17 @@ class Survey extends Component {
             <ENTJ></ENTJ>
           </div >
           <div className="Category_anything">
-
+            <p> - 동성 매칭 여부 - </p>
+            &nbsp;<Button variant="contained" color="primary" size="large">동성이 좋아요</Button>&nbsp;
+            <Button variant="contained" color="secondary" size="large">이성이 좋아요</Button>
             <p> - 같은 과 매칭 유무 - </p>
             &nbsp;<Button variant="contained" color="primary" size="large">같은 과 매칭을 원합니다.</Button>&nbsp;
-            <Button variant="contained" color="inherit" size="large">상관없어요!</Button>&nbsp;
             <Button variant="contained" color="secondary" size="large">같은 과 매칭을 원하지 않습니다.</Button>
             <p> - 군필 여부 - </p>
             &nbsp;<Button variant="contained" color="primary" size="large">군필을 원해요!</Button>&nbsp;
-            <Button variant="contained" color="inherit" size="large">상관없어요!</Button>&nbsp;
             <Button variant="contained" color="secondary" size="large">미필이여도 괜찮아요!</Button>
             <p> - 흡연 여부 - </p>
             &nbsp;<Button variant="contained" color="primary" size="large">흡연자를 좋아해요!</Button>&nbsp;
-            <Button variant="contained" color="inherit" size="large">상관없어요!</Button>&nbsp;
             <Button variant="contained" color="secondary">비흡연자를 좋아해요!</Button>
 
             <br />
