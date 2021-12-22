@@ -24,7 +24,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "oechul_main_2021/build")));
 app.get("*", function (request, response, next) {
-  // res.render("index.html");
   fs.readdir("./data", function (error, filelist) {
     request.list = filelist;
     next();
