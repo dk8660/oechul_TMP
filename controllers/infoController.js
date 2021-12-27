@@ -29,6 +29,8 @@ export const getinfo_process = async (request, response) => {
     MilitaryService,
     Smoker,
     Fre_Drinking,
+    Bodyform,
+    Hobby,
     SameGender,
     SameMajor,
     O_MilitaryService,
@@ -49,7 +51,9 @@ export const getinfo_process = async (request, response) => {
     MilitaryService: MilitaryService,
     Smoker: Smoker,
     Fre_Drinking: Fre_Drinking,
+    Bodyform: Bodyform,
     SameGender: SameGender,
+    Hobby: Hobby,
     SameMajor: SameMajor,
     O_MilitaryService: O_MilitaryService,
     O_Smoker: O_Smoker,
@@ -97,6 +101,8 @@ export const edit_process = async (request, response) => {
     MilitaryService,
     Smoker,
     Fre_Drinking,
+    Bodyform,
+    Hobby,
     SameGender,
     SameMajor,
     O_MilitaryService,
@@ -121,6 +127,8 @@ export const edit_process = async (request, response) => {
       (info.MilitaryService = MilitaryService),
       (info.Smoker = Smoker),
       (info.Fre_Drinking = Fre_Drinking),
+      (info.Bodyform = Bodyform),
+      (info.Hobby = Hobby),
       (info.SameGender = SameGender),
       (info.SameMajor = SameMajor),
       (info.O_MilitaryService = O_MilitaryService),
@@ -140,11 +148,11 @@ export const reference = async (request, response) => {
 };
 
 export const result = async (request, response) => {
-  const { STnumber, kakaoID } = request.body;
+  const { STnumber } = request.body;
   let SP = null;
   await StudentInfo.findOne({ STnumber: STnumber }, (err, person) => {
     if (err) console.log(err);
-    if (person.isMatched === true && person.kakaoID === kakaoID) {
+    if (person.isMatched === true) {
       SP = person.selectedPerson;
     }
   });
