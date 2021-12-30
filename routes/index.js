@@ -13,7 +13,6 @@ import {
   edit_process,
   reference,
   result,
-  watch,
 } from "../controllers/infoController";
 import { matching, select } from "../controllers/matchingFunction";
 var indexRouter = express.Router();
@@ -34,14 +33,8 @@ indexRouter.post("/update_process", update_process);
 
 indexRouter.post("/edit_process", edit_process);
 
-indexRouter.get("/matching", matching);
-
-indexRouter.get("/select", select);
-
 indexRouter.get("/reference", reference);
 
 indexRouter.post("/result", result);
-
-indexRouter.get("/info/:id", watch);
 
 export default indexRouter;

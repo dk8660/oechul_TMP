@@ -6,4 +6,6 @@ block head
 block content
     form(method="POST", action="/result")
         input(placeholder="학번", required, type="text", name="STnumber")
+        input(placeholder="카카오톡 ID", required, type="text", name="kakaoID")
+        p #{msg}
         input(type='submit', value='Submit')

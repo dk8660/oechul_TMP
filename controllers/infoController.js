@@ -7,6 +7,7 @@ export const home = async (request, response) => {
   //   // console.log("infos", infos)
   //   response.render('home', {infos})
   // })
+  return response.render("main");
   return response.render("home", { infos });
 };
 
@@ -29,8 +30,6 @@ export const getinfo_process = async (request, response) => {
     MilitaryService,
     Smoker,
     Fre_Drinking,
-    Bodyform,
-    Hobby,
     SameGender,
     SameMajor,
     O_MilitaryService,
@@ -51,9 +50,7 @@ export const getinfo_process = async (request, response) => {
     MilitaryService: MilitaryService,
     Smoker: Smoker,
     Fre_Drinking: Fre_Drinking,
-    Bodyform: Bodyform,
     SameGender: SameGender,
-    Hobby: Hobby,
     SameMajor: SameMajor,
     O_MilitaryService: O_MilitaryService,
     O_Smoker: O_Smoker,
@@ -63,25 +60,49 @@ export const getinfo_process = async (request, response) => {
 };
 
 export const Delete = async (request, response) => {
-  return response.render("delete");
+  let msg = "";
+  return response.render("delete", { msg });
 };
 
 export const delete_process = async (request, response) => {
-  const { STnumber } = request.body;
-  await StudentInfo.deleteOne({ STnumber: STnumber }, (err) => {
-    if (err) console.log(err);
+  const { STnumber, kakaoID } = request.body;
+  let process = true;
+  await StudentInfo.findById(Number(STnumber), (error, info) => {
+    if (!info) {
+      let msg = "존재하지 않는 학번입니다.";
+      process = false;
+      return response.render("delete", { msg });
+    }
+    if (info.kakaoID !== kakaoID) {
+      let msg = "일치하지 않는 카카오 ID 입니다.";
+      process = false;
+      return response.render("delete", { msg });
+    }
   });
-  return response.redirect(`/`);
+  if (process) {
+    await StudentInfo.deleteOne({ STnumber: STnumber }, (err) => {
+      if (err) console.log(err);
+    });
+    return response.redirect(`/`);
+  }
 };
 
 export const update = async (request, response) => {
-  return response.render("update");
+  let msg = "";
+  return response.render("update", { msg });
 };
 
 export const update_process = async (request, response) => {
-  const { STnumber } = request.body;
+  const { STnumber, kakaoID } = request.body;
   await StudentInfo.findById(Number(STnumber), (error, info) => {
-    if (!info) return response.render("404");
+    if (!info) {
+      let msg = "존재하지 않는 학번입니다.";
+      return response.render("update", { msg });
+    }
+    if (info.kakaoID !== kakaoID) {
+      let msg = "일치하지 않는 카카오 ID 입니다.";
+      return response.render("update", { msg });
+    }
     return response.render("edit", { info });
   });
 };
@@ -101,8 +122,6 @@ export const edit_process = async (request, response) => {
     MilitaryService,
     Smoker,
     Fre_Drinking,
-    Bodyform,
-    Hobby,
     SameGender,
     SameMajor,
     O_MilitaryService,
@@ -127,8 +146,6 @@ export const edit_process = async (request, response) => {
       (info.MilitaryService = MilitaryService),
       (info.Smoker = Smoker),
       (info.Fre_Drinking = Fre_Drinking),
-      (info.Bodyform = Bodyform),
-      (info.Hobby = Hobby),
       (info.SameGender = SameGender),
       (info.SameMajor = SameMajor),
       (info.O_MilitaryService = O_MilitaryService),
@@ -144,20 +161,32 @@ export const edit_process = async (request, response) => {
 };
 
 export const reference = async (request, response) => {
-  return response.render("reference");
+  let msg = "";
+  return response.render("reference", { msg });
 };
 
 export const result = async (request, response) => {
-  const { STnumber } = request.body;
+  const { STnumber, kakaoID } = request.body;
   let SP = null;
   await StudentInfo.findOne({ STnumber: STnumber }, (err, person) => {
     if (err) console.log(err);
+    if (!person) {
+      let msg = "존재하지 않는 학번입니다.";
+      return response.render("reference", { msg });
+    }
+    if (person.kakaoID != kakaoID) {
+      let msg = "일치하지 않는 카카오 ID 입니다.";
+      return response.render("reference", { msg });
+    }
     if (person.isMatched === true) {
       SP = person.selectedPerson;
     }
   });
   if (SP !== null) {
     await StudentInfo.findOne({ STnumber: SP }, (error, info) => {
+      if (!info) {
+        return response.render("sorry");
+      }
       return response.render("result", { info });
     });
   } else {

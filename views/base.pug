@@ -3,7 +3,8 @@ html(lang='ko')
     head
         block head
         link(rel='stylesheet' href='https://unpkg.com/mvp.css')
-    body
+        script(src='public/javascripts/timer.js')
+    body(onload="Timer()")
         main
             block content
     include partials/footer.pug

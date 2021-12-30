@@ -1,0 +1,38 @@
+html(lang='ko')
+    head
+        link(rel='stylesheet' href='https://unpkg.com/mvp.css')
+        script(src='public/javascripts/timer.js')
+
+    body(onload="Timer()")
+        div(id="top")
+            h3(id="title") HUFSTORY
+            a(class="index" href="/") MAIN
+            a(class="index" href="/update") UPDATE 
+            a(class="index" href="/delete") DELETE
+            a(class="index" href="/reference") RESULT 
+        div(id="slogan")
+            h3 외대생 솔로탈출 프로젝트
+            h3 우리는 학교 안에서 만난다 
+        div(id="discription")
+            h4 100% 비밀 보장!
+            h4 작성된 인적사항과 이상형 정보를
+            h4 바탕으로 커플 or 친구가 매칭됩니다.
+        a(id="participation" href="/getInfo") 참여하기
+        br
+        div(id="timer")
+            h4 외출 지원 마감까지 남은 시간
+            span (2022년 1월 21일-1월 31일)
+            ul
+                li
+                    span(class="timerNumber" id="days") 0
+                    p(class="timerWord") DAYS
+                li
+                    span(class="timerNumber" id="hours") 0
+                    p(class="timerWord") HOURS
+                li
+                    span(class="timerNumber" id="minutes") 0
+                    p(class="timerWord") MINUTES
+                li
+                    span(class="timerNumber" id="seconds") 0
+                    p(class="timerWord") SECONDS
+    include partials/footer.pug
