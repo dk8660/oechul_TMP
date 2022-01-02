@@ -3,7 +3,7 @@ import express from "express";
 import { response } from "express";
 import { NotExtended } from "http-errors";
 import {
-  home,
+  main,
   getinfo,
   getinfo_process,
   Delete,
@@ -14,10 +14,9 @@ import {
   reference,
   result,
 } from "../controllers/infoController";
-import { matching, select } from "../controllers/matchingFunction";
 var indexRouter = express.Router();
 
-indexRouter.get("/", home);
+indexRouter.get("/", main);
 
 indexRouter.get("/getinfo", getinfo);
 

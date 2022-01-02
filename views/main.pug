@@ -1,9 +1,52 @@
-html(lang='ko')
-    head
-        link(rel='stylesheet' href='https://unpkg.com/mvp.css')
-        script(src='public/javascripts/timer.js')
+extends base.pug
+block head
+    link(rel='stylesheet' href='https://unpkg.com/mvp.css')
+    script.
+        const D_Year = 2022;
+        const D_Month = 1 - 0;
+        const D_Day = 31;
+        const D_Hours = 0;
+        const D_Minutes = 0;
+        const D_seconds = 0;
 
-    body(onload="Timer()")
+        const endTime = new Date(D_Year, D_Month, D_Day, D_Hours, D_Minutes, D_seconds);
+
+        function countTime() {
+            let now = new Date();
+            let distance = endTime - now;
+
+            let _second = 1000;
+            let _minute = _second * 60;
+            let _hour = _minute * 60;
+            let _day = _hour * 24;
+
+            let days = Math.floor(distance / _day);
+            let hours = Math.floor((distance % _day) / _hour);
+            let minutes = Math.floor((distance % _hour) / _minute);
+            let seconds = Math.floor((distance % _minute) / _second);
+
+            days = days.toString();
+            hours = hours.toString();
+            minutes = minutes.toString();
+            seconds = seconds.toString();
+
+            let T_Days = document.getElementById("days");
+            let T_Hours = document.getElementById("hours");
+            let T_Minutes = document.getElementById("minutes");
+            let T_Seconds = document.getElementById("seconds");
+
+            T_Days.innerHTML = days;
+            T_Hours.innerHTML = hours;
+            T_Minutes.innerHTML = minutes;
+            T_Seconds.innerHTML = seconds;
+        }
+
+        function Timer() {
+            setInterval(countTime, 1000);
+        }
+
+block content
+    body(onload="Timer();")
         div(id="top")
             h3(id="title") HUFSTORY
             a(class="index" href="/") MAIN
@@ -35,4 +78,20 @@ html(lang='ko')
                 li
                     span(class="timerNumber" id="seconds") 0
                     p(class="timerWord") SECONDS
-    include partials/footer.pug
+        div(class="leaf")
+            h3 Hufstory
+            h4 sincee 2014
+            p 훕스토리는 개발팀, 기획&디자인팀으로 이루어진 교내 학생자치기구입니다.
+        div(class="leaf")
+            h4 외대 솔로 탈출 공고
+            p 외대 솔로 탈출 일정: 1월 24일 ~ 1월 31일
+        div(class="leaf")
+            h4 '외대 솔로 탈출'이란?
+            p 외출, 풀어서 외대생 솔로탈출 프로젝트는 교내 유일 자치기구 훕스토리가 진행하는 프로젝트입니다. 각자가 작성한 이상형을 토대로 하여 이상형과 가까운 분을 매칭해드리는 블라인드 매칭 시스템입니다.
+            p 19년도에 글로벌 캠퍼스에서만 530명이 조금 넘는 학우님들이 신청해주셨습니다.
+            p 그때 신청 못하신 분들, 그리고 서울 캠퍼스도 진행해달라고 해주신 학우님들의 요청에 힘입어 이번에는 서울캠퍼스와 글로벌캠퍼스 모두 합쳐 외출 프로젝트를 진행하게 되었습니다!
+        div(class="leaf")
+            h4 매칭 방식
+            p 훕스토리의 외출 프로젝트는 14년도에 처음 시작되었습니다.
+            p 몇 년 간 쌓인 내공으로 여러분들에게 더 잘 맞는 이성을 찾아드릴 수 있습니다!
+            p 1차적으로 컴퓨터 프로그램을 이용하여 우선순위를 선정하여 추립니다. 그 후 2차로는 프로그램을 거친 명단을 가지고 직접 비교 후 매칭하여 더 이상형에 가까운 분과 매칭 될 수 있도록 노력합니다.

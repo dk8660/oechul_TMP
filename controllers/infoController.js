@@ -1,13 +1,11 @@
 import StudentInfo from "../models/Student_Info";
 
+export const main = async (request, response) => {
+  return response.render("main");
+};
+
 export const home = async (request, response) => {
   const infos = await StudentInfo.find({});
-  // StudentInfo.find({}, (error, infos) => {
-  //   // console.log("errors", error)
-  //   // console.log("infos", infos)
-  //   response.render('home', {infos})
-  // })
-  return response.render("main");
   return response.render("home", { infos });
 };
 
