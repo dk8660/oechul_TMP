@@ -1,8 +1,154 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+  text-align: center;
+  font-family: "Nanum Brush Script", cursive;
 }
 
-a {
-  color: #00B7FF;
+#top {
+  /* background-image: ; */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  background-color: #282c34;
+  scroll-behavior: smooth;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#title {
+  display: inline;
+  font-size: 25px;
+  margin-right: 40%;
+}
+
+.index {
+  display: inline;
+  font-size: 22px;
+  margin-left: 10px;
+  margin-right: 10px;
+  text-decoration: none;
+  color: white;
+}
+
+#slogan {
+  background-color: #282c34;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  padding-top: 60px;
+}
+
+#slogan > h3 {
+  margin-bottom: 5px;
+}
+
+#description {
+  font-size: 1rem;
+  margin-top: 40px;
+}
+
+#description > h4 {
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+#participation {
+  display: block;
+  border: 1px solid #61dafb;
+  border-radius: 5px;
+  background-color: #282c34;
+  font-size: 1rem;
+  margin-top: 50px;
+  text-decoration: none;
+  color: #61dafb;
+  padding: 9px 15px 8px 15px;
+}
+
+#participation:hover {
+  background-color: #61dafb;
+  border: 1px solid #61dafb;
+  color: #282c34;
+}
+
+#timer {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 20px;
+  font-family: "Quicksand", sans-serif;
+  background-color: #282c34;
+  color: white;
+  font-size: 1.8rem;
+  word-break: keep-all;
+}
+
+#timer > h4 {
+  margin: 0 auto;
+}
+
+#timer > span {
+  display: block;
+  font-size: 0.9rem;
+  margin-top: 3px;
+  margin-bottom: 11px;
+}
+
+#timer > ul {
+  list-style-type: none;
+  width: 100%;
+  padding: 0;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 700;
+  margin: auto;
+}
+
+#timer > ul > li {
+  display: inline-block;
+  width: 6rem;
+}
+
+.timerNumber {
+  display: block;
+  font-size: 1.3rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  margin: 0 auto;
+}
+
+.timerWord {
+  font-size: 0.5rem;
+  line-height: 1.5rem;
+  margin: 0 auto;
+  position: relative;
+  top: 0;
+}
+
+#footer {
+  color: white;
+  background-color: black;
+  text-align: center;
+  height: 100px;
+  padding: 10px;
+}
+
+#footer > a {
+  display: inline-block;
+  margin-left: 10px;
+  margin-right: 10px;
+  text-decoration: none;
+  color: #61dafb;
+}
+
+#footer > a:hover {
+  color: white;
 }
