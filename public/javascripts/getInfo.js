@@ -86,6 +86,6 @@ function booleanButton(name, num) {
     element.value = "false";
   }
 
-  current.className = name + "Button_on";
-  other.className = name + "Button_off";
+  current.className = "Button_on";
+  other.className = "Button_off";
 }
