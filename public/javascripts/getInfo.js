@@ -89,3 +89,7 @@ function booleanButton(name, num) {
   current.className = "Button_on";
   other.className = "Button_off";
 }
+
+function FieldOnchange(object) {
+  console.log(object);
+}

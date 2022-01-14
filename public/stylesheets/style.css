@@ -214,3 +214,9 @@ body {
 .Button_on {
   background-color: white;
 }
+
+#getInfoPost > div {
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+}
