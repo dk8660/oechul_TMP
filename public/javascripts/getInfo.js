@@ -15,62 +15,56 @@ function genderButton(num) {
   gender.value = num;
 }
 
-let Field_List = [];
-
-function FieldButton(num) {
-  let current = document.getElementById("Field" + num);
-
-  if ((current.className = "FieldButton_on")) {
-    current.className = "FieldButton_off";
-    let index = Field_List.findIndex(num);
-    Field_List.pop(index);
-  } else {
-    if (Field_List.length < 2) {
-      current.className = "FieldButton_on";
-      Field_List.push(num);
-    }
-  }
-
-  Field_List.sort();
-  let str = "";
-  Field_List.forEach((element) => {
-    if (str.length != 0) {
-      str = str + ", " + element;
-    } else {
-      str = str + element;
-    }
-  });
-
-  let Field = document.getElementById("Field");
-  Field.value = str;
-}
-
 let MBTI_List = [];
 
 function WantedMBTIButton(num) {
-  let current = document.getElementById("MBTI" + num);
+  let current = document.getElementById("WantedMBTI" + num);
 
-  if ((current.className = "MBTIButton_on")) {
+  num = parseInt(num);
+  if (current.className == "MBTIButton_on") {
     current.className = "MBTIButton_off";
     let index = MBTI_List.findIndex(num);
-    MBTI_List.pop(index);
+    MBTI_List.splice(index, 1);
   } else {
     current.className = "MBTIButton_on";
     MBTI_List.push(num);
   }
 
-  MBTI_List.sort();
-  let str = "";
-  MBTI_List.forEach((element) => {
-    if (str.length != 0) {
-      str = str + ", " + element;
-    } else {
-      str = str + element;
-    }
+  MBTI_List.sort(function (a, b) {
+    if (a > b) return 1;
+    if (a === b) return 0;
+    if (a < b) return -1;
   });
+  // let str = "";
+  // MBTI_List.forEach((element) => {
+  //   if (str.length != 0) {
+  //     str = str + ", " + element;
+  //   } else {
+  //     str = str + element;
+  //   }
+  // });
+
+  // let WantedMBTI = document.getElementById("WantedMBTI");
+  // WantedMBTI.value = str;
 
   let WantedMBTI = document.getElementById("WantedMBTI");
-  WantedMBTI.value = str;
+  WantedMBTI.value = MBTI_List;
+}
+
+let selectedMBTI = null;
+
+function MBTIButton(num) {
+  let current = document.getElementById("MBTI" + num);
+
+  if (selectedMBTI) {
+    document.getElementById("MBTI" + selectedMBTI).className = "MBTIButton_off";
+  }
+
+  current.className = "MBTIButton_on";
+  selectedMBTI = num;
+
+  let OwnMBTI = document.getElementById("OwnMBTI");
+  OwnMBTI.value = parseInt(num);
 }
 
 function booleanButton(name, num) {
@@ -90,6 +84,19 @@ function booleanButton(name, num) {
   other.className = "Button_off";
 }
 
-function FieldOnchange(object) {
-  console.log(object);
+function KoMButton(num) {
+  let current, other;
+  let element = document.getElementById("KoM");
+  if (num == 0) {
+    current = document.getElementById("kind" + "Button0");
+    other = document.getElementById("kind" + "Button1");
+    element.value = "연인";
+  } else {
+    current = document.getElementById("kind" + "Button1");
+    other = document.getElementById("kind" + "Button0");
+    element.value = "친구";
+  }
+
+  current.className = "Button_on";
+  other.className = "Button_off";
 }
