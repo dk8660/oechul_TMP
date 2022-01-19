@@ -1,6 +1,7 @@
 extends base.pug
 block head
     script(src='javascripts/timer.js')
+    link(href="https://fonts.googleapis.com/css2?family=Gaegu&family=Hi+Melody&family=Nanum+Pen+Script&family=Noto+Serif+KR:wght@500&display=swap" rel="stylesheet")
 
 block content
     body(onload="Timer();")
@@ -30,20 +31,50 @@ block content
                     li
                         span(class="timerNumber" id="seconds") 0
                         p(class="timerWord") SECONDS
-        div(class="leaf")
-            h3 Hufstory
-            h4 sincee 2014
-            p 훕스토리는 개발팀, 기획&디자인팀으로 이루어진 교내 학생자치기구입니다.
-        div(class="leaf")
-            h4 외대 솔로 탈출 공고
-            p 외대 솔로 탈출 일정: 1월 24일 ~ 1월 31일
-        div(class="leaf")
-            h4 '외대 솔로 탈출'이란?
-            p 외출, 풀어서 외대생 솔로탈출 프로젝트는 교내 유일 자치기구 훕스토리가 진행하는 프로젝트입니다. 각자가 작성한 이상형을 토대로 하여 이상형과 가까운 분을 매칭해드리는 블라인드 매칭 시스템입니다.
-            p 19년도에 글로벌 캠퍼스에서만 530명이 조금 넘는 학우님들이 신청해주셨습니다.
-            p 그때 신청 못하신 분들, 그리고 서울 캠퍼스도 진행해달라고 해주신 학우님들의 요청에 힘입어 이번에는 서울캠퍼스와 글로벌캠퍼스 모두 합쳐 외출 프로젝트를 진행하게 되었습니다!
-        div(class="leaf")
-            h4 매칭 방식
-            p 훕스토리의 외출 프로젝트는 14년도에 처음 시작되었습니다.
-            p 몇 년 간 쌓인 내공으로 여러분들에게 더 잘 맞는 이성을 찾아드릴 수 있습니다!
-            p 1차적으로 컴퓨터 프로그램을 이용하여 우선순위를 선정하여 추립니다. 그 후 2차로는 프로그램을 거친 명단을 가지고 직접 비교 후 매칭하여 더 이상형에 가까운 분과 매칭 될 수 있도록 노력합니다.
+        div(id="slider")
+            ul
+                li
+                    div(class="slider-container")
+                    
+                        h2 [Hufstory]
+                        p since 2014
+                        br
+                        p(class="in" style="font-size: 16px; font-weight: bold;") 훕스토리는 개발팀, 기획&디자인팀으로 이루어진 
+                            br
+                            br
+                            |교내 학생자치기구입니다.
+                li
+                    div(class="slider-container")
+                        h2 [외대 솔로 탈출 공고]
+                        br
+                        p(class="in" style="font-size: 20px; font-weight: bold;") 외대 솔로 탈출 일정: 1월 24일 ~ 1월 31일
+                li
+                    div(class="slider-container")
+                        h2 [MEETS LESTING]
+                        br
+                        p(class="in") 외출, 풀어서 외대생 솔로탈출 프로젝트는 교내 유일 자치기구 훕스토리가
+                            br
+                            |진행하는 프로젝트입니다.
+                            br
+                            br
+                            |각자가 작성한 이상형을 토대로 하여 이상형과 가까운 분을 매칭하는 블라인드 매칭 시스템입니다.
+                            br
+                        p(class="in") 19년도에 글로벌 캠퍼스에서만 530명이 조금 넘는 학우님들이 신청해주셨습니다.</p>
+                        p(class="in") 그때 신청 못하신 분들의 요청에 힘입어 이번에는 양 캠퍼스에서 외출 프로젝트를 진행하게 되었습니다!
+                li
+                    div(class="slider-container")
+                        h2 [매칭 방식]
+                        br
+                        p(class="in") 훕스토리의 외출 프로젝트는 14년도에 처음 시작되었습니다.
+                        br
+                        p(class="in") 몇 년 간 쌓인 내공으로 여러분들에게 잘 맞는 이성을 찾아드릴 수 있습니다!
+                        p(class="in")
+                            |1차적으로 컴퓨터 프로그램을 이용하여 우선순위를 선정하여 추린 후,
+                            br
+                            br
+                            |프로그램을 거친 명단을 가지고 직접 비교 후 매칭하여
+                            br
+                            |더 이상형에 가까운 분과 매칭 될 수 있도록 노력합니다. 
+            a(class="prev" onclick="plusSlides(-1)") ❮
+            a(class="next" onclick="plusSlides(1)") ❯
+    br

@@ -1,11 +1,23 @@
 extends base.pug
 
 block head
-    h1 Reference the Result
-
+    link(href="https://fonts.googleapis.com/css2?family=Gaegu&family=Hi+Melody&family=Nanum+Pen+Script&family=Noto+Serif+KR:wght@500&display=swap" rel="stylesheet")
+    link(rel="stylesheet" href="stylesheets/matching.css")
 block content
     form(method="POST", action="/result")
-        input(placeholder="학번", required, type="text", name="STnumber")
-        input(placeholder="카카오톡 ID", required, type="text", name="kakaoID")
-        p #{msg}
-        input(type='submit', value='Submit')
+        img(src="/img/resultPage.jpg" height="700" width="1439.5")
+
+        p(class="write") Time To Find Your Love
+        div(id="id")
+            |학번입력 :
+            input(placeholder="학번", required, type="text", name="STnumber" style="font-family: 'Nanum Pen Script', cursive; font-size: 25px;")
+            br
+            br
+            |카카오톡 ID : 
+            input(placeholder="카카오톡 ID", required, type="text", name="kakaoID" style="font-size: 25px; font-family: 'Nanum Pen Script', cursive;")
+            br
+            br
+            br
+            p #{msg}
+            br
+            input(type="submit" value="조회하기" id="submit")
