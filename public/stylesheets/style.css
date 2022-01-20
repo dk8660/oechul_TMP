@@ -210,7 +210,7 @@ body {
 .genderButton_off {
   border: 1px solid #61dafb;
   border-radius: 5px;
-  background-color: lavender;
+  background-color: white;
   font-size: 10px;
   margin-left: auto;
   margin-right: auto;
@@ -231,10 +231,16 @@ body {
   padding: 9px 15px 8px 15px;
 }
 
+.genderButton_off:hover {
+  background-color: #61dafb;
+  border: 1px solid #61dafb;
+  color: #282c34;
+}
+
 .Button_off {
   border: 1px solid #61dafb;
   border-radius: 5px;
-  background-color: lavender;
+  background-color: white;
   font-size: 10px;
   margin-left: auto;
   margin-right: auto;
@@ -255,6 +261,12 @@ body {
   padding: 9px 15px 8px 15px;
 }
 
+.Button_off:hover {
+  background-color: #61dafb;
+  border: 1px solid #61dafb;
+  color: #282c34;
+}
+
 #getInfoPost > div {
   width: 40%;
   margin-left: auto;
@@ -264,7 +276,7 @@ body {
 .MBTIButton_off {
   border: 1px solid #61dafb;
   border-radius: 5px;
-  background-color: lavender;
+  background-color: white;
   font-size: 10px;
   margin-left: auto;
   margin-right: auto;
@@ -283,6 +295,11 @@ body {
   text-decoration: none;
   color: #61dafb;
   padding: 9px 15px 8px 15px;
+}
+.MBTIButton_off:hover {
+  background-color: #61dafb;
+  border: 1px solid #61dafb;
+  color: #282c34;
 }
 
 #slider,
