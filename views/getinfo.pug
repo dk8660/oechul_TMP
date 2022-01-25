@@ -6,7 +6,7 @@ block head
 
 block content
     div(id="survey_main")
-        h1 정보기입
+        h1(style="color:white;") 정보기입
         div(id="survey_text_box")
             br
             br
@@ -88,10 +88,9 @@ block content
                     input(type='button', value="ESFJ", id="WantedMBTI13", class="MBTIButton_off", onclick="WantedMBTIButton(13)")
                     input(type='button', value="ENFJ", id="WantedMBTI14", class="MBTIButton_off", onclick="WantedMBTIButton(14)")
                     input(type='button', value="ENTJ", id="WantedMBTI15", class="MBTIButton_off", onclick="WantedMBTIButton(15)")
-                div 
+                div
                     p 10. 전공
                     div(id="majorInput")
-                    br
                     select(id="majorSelect" onchange="majorSelectFunction()")
                         option(id="majorDefaultOption" value="default" selected) 본인의 전공을 선택해주세요
                         optgroup(label='서울캠퍼스')
