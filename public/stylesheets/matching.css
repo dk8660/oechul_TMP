@@ -1,141 +1,148 @@
 body {
-    padding: 0 0 0 0;
-    margin: 0 0 0 0;
-    text-align: center;
-    font-family: "Nanum Brush Script", cursive;
-    min-height: 50vh;
-    display: flex;
-    flex-direction: column;
-  }
-#id{
-    position: fixed;
-    top: 430px;
-    left: 1000px;
-    font-size: 25px;
-    font-family: 'Nanum Pen Script', cursive;
-    color: white;
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+  text-align: center;
+  font-family: "Nanum Brush Script", cursive;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
 }
-#submit{
-    font-size: 30px;
-    font-family: 'Nanum Pen Script', cursive;
-    border-radius:  20px;
-    border: none;
-    position: absolute;
-    right: -20px;
-    background-color: #fffcc7;
-    width: 230px;
-    height: 50px;
-    background-color: #fffcc7;
-    color:  #282c34;
-    border: none;
+#id {
+  position: fixed;
+  top: 430px;
+  left: 1000px;
+  font-size: 25px;
+  font-family: "Nanum Pen Script", cursive;
+  color: white;
+}
+#submit {
+  font-size: 30px;
+  font-family: "Nanum Pen Script", cursive;
+  border-radius: 20px;
+  border: none;
+  position: absolute;
+  right: -20px;
+  background-color: #fffcc7;
+  width: 230px;
+  height: 50px;
+  background-color: #fffcc7;
+  color: #282c34;
+  border: none;
 }
 
 #top {
-    /* background-image: ; */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 100%;
-    position: fixed;
-    z-index: 1;
-    background-color: #282c34;
-    scroll-behavior: smooth;
-    color: white;
-    font-family: "Roboto", sans-serif;
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-  
-  #title {
-    display: inline;
-    font-size: 25px;
-    margin-right: 40%;
-  }
-  
-  .index {
-    display: inline;
-    font-size: 22px;
-    margin-left: 10px;
-    margin-right: 10px;
-    text-decoration: none;
-    color: white;
-  }
+  /* background-image: ; */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  background-color: #282c34;
+  scroll-behavior: smooth;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
 
-.write{
-    font-size: 3.5rem;
-font-weight: 450;
-letter-spacing: 6px;
-padding:0rem 3rem;
-text-align: center;
-opacity:0;
-border-radius: 5px;
-width: 50%;
-padding: 1rem;
-grid-gap: 0.2rem;
-color: white;
-position: fixed;
-top:47%;
-left:75%;
-transform:translate(-50%, -50%);
-animation:lightson .5s ease 10 forwards;
+#title {
+  display: inline;
+  font-size: 25px;
+  margin-right: 40%;
 }
-@keyframes lightson{
-0%{
-opacity:0;
-text-shadow: 0px 0px 0px #fffcc7, 0px 0px 0px #fffcc7, 0px 0px 0px #fffcc7;
+
+.index {
+  display: inline;
+  font-size: 22px;
+  margin-left: 10px;
+  margin-right: 10px;
+  text-decoration: none;
+  color: white;
 }
-20%{
-opacity:0.5;
-text-shadow: 0px 0px 2.5px #fffcc7, 0px 0px 5px #fffcc7, 1px 1px 25px #fffcc7;
+
+.write {
+  font-size: 3.5rem;
+  font-weight: 450;
+  letter-spacing: 6px;
+  padding: 0rem 3rem;
+  text-align: center;
+  opacity: 0;
+  border-radius: 5px;
+  width: 50%;
+  padding: 1rem;
+  grid-gap: 0.2rem;
+  color: white;
+  position: fixed;
+  top: 47%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  animation: lightson 0.5s ease 10 forwards;
 }
-40%{
-opacity:0;
-text-shadow: 0px 0px 1px #fffcc7, 0px 0px 2px #fffcc7, 0px 0px 10px #fffcc7;
-}
-50%{
-opacity:1;
-text-shadow: 0px 0px 5px #fffcc7, 0px 0px 10px #fffcc7, 1px 1px 50px #fffcc7;
-}
-100%{
-opacity:1;
-text-shadow: 0px 0px 5px #fffcc7, 0px 0px 10px #fffcc7, 1px 1px 50px #fffcc7;
-}
+@keyframes lightson {
+  0% {
+    opacity: 0;
+    text-shadow: 0px 0px 0px #fffcc7, 0px 0px 0px #fffcc7, 0px 0px 0px #fffcc7;
+  }
+  20% {
+    opacity: 0.5;
+    text-shadow: 0px 0px 2.5px #fffcc7, 0px 0px 5px #fffcc7,
+      1px 1px 25px #fffcc7;
+  }
+  40% {
+    opacity: 0;
+    text-shadow: 0px 0px 1px #fffcc7, 0px 0px 2px #fffcc7, 0px 0px 10px #fffcc7;
+  }
+  50% {
+    opacity: 1;
+    text-shadow: 0px 0px 5px #fffcc7, 0px 0px 10px #fffcc7, 1px 1px 50px #fffcc7;
+  }
+  100% {
+    opacity: 1;
+    text-shadow: 0px 0px 5px #fffcc7, 0px 0px 10px #fffcc7, 1px 1px 50px #fffcc7;
+  }
 }
 
 @keyframes move-background {
-from {
--webkit-transform: translate3d(0px, 0px, 0px);
-}
-to { 
--webkit-transform: translate3d(1000px, 0px, 0px);
-}
+  from {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+  }
+  to {
+    -webkit-transform: translate3d(1000px, 0px, 0px);
+  }
 }
 @-webkit-keyframes move-background {
-from {
--webkit-transform: translate3d(0px, 0px, 0px);
-}
-to { 
--webkit-transform: translate3d(1000px, 0px, 0px);
-}
+  from {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+  }
+  to {
+    -webkit-transform: translate3d(1000px, 0px, 0px);
+  }
 }
 
-@-moz-keyframes move-background {    
-from {
--webkit-transform: translate3d(0px, 0px, 0px);
-}
-to { 
--webkit-transform: translate3d(1000px, 0px, 0px);
-}
+@-moz-keyframes move-background {
+  from {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+  }
+  to {
+    -webkit-transform: translate3d(1000px, 0px, 0px);
+  }
 }
 
 @-webkit-keyframes move-background {
-from {
--webkit-transform: translate3d(0px, 0px, 0px);
-}
-to { 
--webkit-transform: translate3d(1000px, 0px, 0px);
-}
+  from {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+  }
+  to {
+    -webkit-transform: translate3d(1000px, 0px, 0px);
+  }
 }
 
+#testBack {
+  background-image: "../public/img/resultPage";
+  width: 100%;
+}
 
-
+p {
+  color: white;
+}

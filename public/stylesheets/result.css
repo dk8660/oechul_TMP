@@ -1,0 +1,56 @@
+#banner2 {
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  min-height: 105vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #282c34;
+}
+
+#yours {
+  position: absolute;
+  top: 70px;
+  left: 120px;
+  font-size: 30px;
+  font-weight: 700;
+  text-decoration: underline;
+  font-family: "Gaegu", cursive;
+}
+
+#text2 {
+  position: absolute;
+  top: 120px;
+  right: 670px;
+  font-size: 32px;
+  font-weight: 500;
+  font-family: "Nanum Pen Script", cursive;
+  text-align: left;
+}
+
+h1 {
+  position: absolute;
+  top: 400px;
+  font-family: "Gaegu", cursive;
+  right: 120px;
+  font-size: 35px;
+  text-decoration: underline;
+  color: bisque;
+}
+
+ul {
+  list-style-type: square;
+}
+
+h2 {
+  position: absolute;
+  top: 200px;
+  font-family: "Gaegu", cursive;
+  left: 40px;
+  font-size: 35px;
+  text-decoration: underline;
+  color: bisque;
+}

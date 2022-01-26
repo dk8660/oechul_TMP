@@ -185,7 +185,15 @@ export const result = async (request, response) => {
       if (!info) {
         return response.render("sorry");
       }
-      return response.render("result", { info });
+      let result = {
+        OwnMBTI: convertMBTIIDtoString(info.OwnMBTI),
+        kakaoID: info.kakaoID,
+        Gender: convertGenderIDtoString(info.Gender),
+        Field: convertFieldIDtoString(info.Field),
+        instagramID: info.instagramID,
+        Major: info.Major,
+      };
+      return response.render("result", { result });
     });
   } else {
     return response.render("sorry");
@@ -198,3 +206,64 @@ export const watch = async (request, response) => {
     return response.render("detail", { info });
   });
 };
+
+const FieldList = [
+  "강남구",
+  "서초구",
+  "마포구",
+  "동대문구",
+  "성남시",
+  "수원시",
+  "용인시",
+  "고양시",
+  "인천",
+  "대전",
+  "강릉",
+  "전주",
+  "광주광역시",
+  "대구",
+  "부산",
+];
+
+function convertFieldIDtoString(ID_List) {
+  let str = "";
+  for (let i = 0; i < ID_List.length; i++) {
+    if (i === 0) {
+      str = str + FieldList[ID_List[i]];
+    } else {
+      str = str + ", " + FieldList[ID_List[i]];
+    }
+  }
+  return str;
+}
+
+function convertGenderIDtoString(GenderID) {
+  if (GenderID == 0) {
+    return "남성";
+  } else {
+    return "여성";
+  }
+}
+
+const MBTI_List = [
+  "ISTJ",
+  "ISFJ",
+  "INFJ",
+  "INTJ",
+  "ISTP",
+  "ISFP",
+  "INFP",
+  "INTP",
+  "ESTP",
+  "ESFP",
+  "ENFP",
+  "ENTP",
+  "ESTJ",
+  "ESFJ",
+  "ENJF",
+  "ENTJ",
+];
+
+function convertMBTIIDtoString(MBTI) {
+  return MBTI_List[MBTI];
+}
