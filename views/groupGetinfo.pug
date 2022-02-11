@@ -1,0 +1,28 @@
+extends base.pug
+
+block head 
+    title Group 
+
+block content
+    input(type='text', required, name="STnumber", placeholder="학번")
+    input(type='text', required, name="Name", placeholder="이름")
+    input(type='text', required, name="Gender", placeholder="성별")
+    input(type='text', required, name="Major", placeholder="전공")
+    input(type='text', required, name="Field", placeholder="만날 지역")
+    input(type='text', required, name="instagramID", placeholder="인스타그램 아이디")
+    input(type='text', required, name="kakaoID", placeholder="카카오톡 아이디")
+    input(type='text', required, name="secondStudent_STnumber", placeholder="두 번째 멤버 학번")
+    input(type='text', required, name="secondStudent_Name", placeholder="두 번째 멤버 이름")
+    input(type='text', required, name="secondStudent_instagramID", placeholder="두 번째 멤버 인스타그램 아이디")
+    input(type='text', required, name="secondStudent_kakaoID", placeholder="두 번째 멤버 카카오톡 아이디")
+    input(type='text', name="thirdStudent_STnumber", placeholder="세 번째 멤버 학번")
+    input(type='text', name="thirdStudent_Name", placeholder="세 번째 멤버 이름")
+    input(type='text', name="thirdStudent_instagramID", placeholder="세 번째 멤버 인스타그램 아이디")
+    input(type='text', name="thirdStudent_kakaoID", placeholder="세 번째 멤버 카카오톡 아이디")
+    input(type='text', name="forthStudent_STnumber", placeholder="네 번째 멤버 학번")
+    input(type='text', name="forthStudent_Name", placeholder="네 번째 멤버 이름")
+    input(type='text', name="forthStudent_instagramID", placeholder="네 번째 멤버 인스타그램 아이디")
+    input(type='text', name="forthStudent_kakaoID", placeholder="네 번째 멤버 카카오톡 아이디")
+    input(type='text', required, name="currentMember", placeholder="현재 멤버 수")
+
+    a(href="/group/getinfo_process") 제출

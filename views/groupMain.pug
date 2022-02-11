@@ -1,0 +1,14 @@
+extends base.pug
+include mixins/simple
+
+block head 
+    title Home
+
+block content 
+    h1 home!
+
+    a(class='button' href='/group/getinfo') 그룹 추가
+    br
+    a(class='button' href='/group/match') 그룹 매칭
+    br
+    a(class='button' href='/groupInfos') 그룹 정보

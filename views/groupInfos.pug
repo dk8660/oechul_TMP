@@ -1,0 +1,13 @@
+extends base.pug
+include mixins/groupInfo
+
+block head 
+    title Infos
+
+block content 
+    h2 Informations:
+    each info in infos
+        +groupInfo(info)
+    else 
+        li Sorry nothing found.
+    a(class='button' href='/group/') 메인
