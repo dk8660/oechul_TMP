@@ -1,0 +1,10 @@
+extends base.pug
+
+block head
+    
+
+block content
+    form(method="POST", action="/group/groupDelete_process")
+        input(placeholder="학번", required, type="text", name="code")
+        br
+        input(type='submit', value='Submit')

@@ -1,3 +1,4 @@
+import { request, response } from "express";
 import party from "../models/party";
 
 export const groupMatching = async (request, response) => {
@@ -113,5 +114,19 @@ export const groupInfos = async (request, response) => {
 };
 
 export const groupMain = async (request, response) => {
+  return response.render("groupMain");
+};
+
+export const groupDelete = async (request, response) => {
+  return response.render("groupDelete");
+};
+
+export const groupDelete_process = async (request, response) => {
+  const { code } = request.body;
+  console.log(await party.find({ code: code }));
+  await party.deleteOne({ code: code }, (error) => {
+    if (error) console.log(error);
+  });
+
   return response.render("groupMain");
 };
