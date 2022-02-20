@@ -74,7 +74,7 @@ body {
   grid-gap: 0.2rem;
   color: white;
   position: fixed;
-  top: 47%;
+  top: 30%;
   left: 75%;
   transform: translate(-50%, -50%);
   animation: lightson 0.5s ease 10 forwards;
@@ -139,10 +139,18 @@ body {
 }
 
 #testBack {
-  background-image: "../public/img/resultPage";
+  background-image: "../public/img/resultback";
   width: 100%;
 }
 
 p {
   color: white;
+}
+
+.updateimg {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
 }
