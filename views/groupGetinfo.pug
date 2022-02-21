@@ -2,9 +2,15 @@ extends base.pug
 
 block head 
     title Group 
+    script(src="javascripts/getInfoGroup.js")
 
 block content
     form(method="POST", action="/group/getinfo_process")
+        select(id="memberSelect" onchange="memberSelectFunction()")
+            option(id="memberDefaultOption" value="default" selected) 참가할 인원 수를 정해주세요
+            option(class="option" value="2") 2명
+            option(class="option" value="3") 3명
+            option(calss="option" value="4") 4명
         input(type='text', required, name="STnumber", placeholder="학번")
         input(type='text', required, name="Name", placeholder="이름")
         input(type='text', required, name="Gender", placeholder="성별")
@@ -16,14 +22,6 @@ block content
         input(type='text', required, name="secondStudent_Name", placeholder="두 번째 멤버 이름")
         input(type='text', name="secondStudent_instagramID", placeholder="두 번째 멤버 인스타그램 아이디")
         input(type='text', required, name="secondStudent_kakaoID", placeholder="두 번째 멤버 카카오톡 아이디")
-        input(type='text', name="thirdStudent_STnumber", placeholder="세 번째 멤버 학번")
-        input(type='text', name="thirdStudent_Name", placeholder="세 번째 멤버 이름")
-        input(type='text', name="thirdStudent_instagramID", placeholder="세 번째 멤버 인스타그램 아이디")
-        input(type='text', name="thirdStudent_kakaoID", placeholder="세 번째 멤버 카카오톡 아이디")
-        input(type='text', name="forthStudent_STnumber", placeholder="네 번째 멤버 학번")
-        input(type='text', name="forthStudent_Name", placeholder="네 번째 멤버 이름")
-        input(type='text', name="forthStudent_instagramID", placeholder="네 번째 멤버 인스타그램 아이디")
-        input(type='text', name="forthStudent_kakaoID", placeholder="네 번째 멤버 카카오톡 아이디")
-        input(type='text', required, name="currentMember", placeholder="현재 멤버 수")
+        div(id="additionalMember")
 
         input(type="submit", value="제출")
