@@ -94,31 +94,51 @@ thirdStudent.id = "thirdStudent";
 let thirdStudent_STnumber = document.createElement("input");
 thirdStudent_STnumber.type = "text";
 thirdStudent_STnumber.name = "thirdStudent_STnumber";
-thirdStudent_STnumber.placeholder = "세 번째 멤버 학번";
 thirdStudent_STnumber.className = "GroupInput";
+thirdStudent_STnumber.required = true;
+let thirdStudent_STnumber_div = document.createElement("div");
+let thirdStudent_STnumber_p = document.createElement("p");
+thirdStudent_STnumber_p.innerHTML = "13. 세 번째 멤버 학번";
+thirdStudent_STnumber_div.appendChild(thirdStudent_STnumber_p);
+thirdStudent_STnumber_div.appendChild(thirdStudent_STnumber);
 
 let thirdStudent_Name = document.createElement("input");
 thirdStudent_Name.type = "text";
 thirdStudent_Name.name = "thirdStudent_Name";
-thirdStudent_Name.placeholder = "세 번째 멤버 이름";
+thirdStudent_Name.required = true;
 thirdStudent_Name.className = "GroupInput";
+let thirdStudent_Name_div = document.createElement("div");
+let thirdStudent_Name_p = document.createElement("p");
+thirdStudent_Name_p.innerHTML = "14. 세 번째 멤버 이름";
+thirdStudent_Name_div.appendChild(thirdStudent_Name_p);
+thirdStudent_Name_div.appendChild(thirdStudent_Name);
 
 let thirdStudent_instagramID = document.createElement("input");
 thirdStudent_instagramID.type = "text";
 thirdStudent_instagramID.name = "thirdStudent_instagramID";
-thirdStudent_instagramID.placeholder = "세 번째 멤버 인스타그램 아이디";
+thirdStudent_instagramID.placeholder = "필수가 아닙니다!";
 thirdStudent_instagramID.className = "GroupInput";
+let thirdStudent_instagramID_div = document.createElement("div");
+let thirdStudent_instagramID_p = document.createElement("p");
+thirdStudent_instagramID_p.innerHTML = "15. 세 번째 멤버 인스타그램 아이디";
+thirdStudent_instagramID_div.appendChild(thirdStudent_instagramID_p);
+thirdStudent_instagramID_div.appendChild(thirdStudent_instagramID);
 
 let thirdStudent_kakaoID = document.createElement("input");
 thirdStudent_kakaoID.type = "text";
 thirdStudent_kakaoID.name = "thirdStudent_kakaoID";
-thirdStudent_kakaoID.placeholder = "세 번째 멤버 카카오톡 아이디";
+thirdStudent_kakaoID.required = true;
 thirdStudent_kakaoID.className = "GroupInput";
+let thirdStudent_kakaoID_div = document.createElement("div");
+let thirdStudent_kakaoID_p = document.createElement("p");
+thirdStudent_kakaoID_p.innerHTML = "16. 세 번째 멤버 카카오톡 아이디";
+thirdStudent_kakaoID_div.appendChild(thirdStudent_kakaoID_p);
+thirdStudent_kakaoID_div.appendChild(thirdStudent_kakaoID);
 
-thirdStudent.appendChild(thirdStudent_STnumber);
-thirdStudent.appendChild(thirdStudent_Name);
-thirdStudent.appendChild(thirdStudent_instagramID);
-thirdStudent.appendChild(thirdStudent_kakaoID);
+thirdStudent.appendChild(thirdStudent_STnumber_div);
+thirdStudent.appendChild(thirdStudent_Name_div);
+thirdStudent.appendChild(thirdStudent_instagramID_div);
+thirdStudent.appendChild(thirdStudent_kakaoID_div);
 
 let forthStudent = document.createElement("div");
 forthStudent.id = "forthStudent";
@@ -126,31 +146,51 @@ forthStudent.id = "forthStudent";
 let forthStudent_STnumber = document.createElement("input");
 forthStudent_STnumber.type = "text";
 forthStudent_STnumber.name = "forthStudent_STnumber";
-forthStudent_STnumber.placeholder = "네 번째 멤버 학번";
+forthStudent_STnumber.required = true;
 forthStudent_STnumber.className = "GroupInput";
+let forthStudent_STnumber_div = document.createElement("div");
+let forthStudent_STnumber_p = document.createElement("p");
+forthStudent_STnumber_p.innerHTML = "17. 네 번째 멤버 학번";
+forthStudent_STnumber_div.appendChild(forthStudent_STnumber_p);
+forthStudent_STnumber_div.appendChild(forthStudent_STnumber);
 
 let forthStudent_Name = document.createElement("input");
 forthStudent_Name.type = "text";
 forthStudent_Name.name = "forthStudent_Name";
-forthStudent_Name.placeholder = "네 번째 멤버 이름";
+forthStudent_Name.required = true;
 forthStudent_Name.className = "GroupInput";
+let forthStudent_Name_div = document.createElement("div");
+let forthStudent_Name_p = document.createElement("p");
+forthStudent_Name_p.innerHTML = "18. 네 번째 멤버 이름";
+forthStudent_Name_div.appendChild(forthStudent_Name_p);
+forthStudent_Name_div.appendChild(forthStudent_Name);
 
 let forthStudent_instagramID = document.createElement("input");
 forthStudent_instagramID.type = "text";
 forthStudent_instagramID.name = "forthStudent_instagramID";
-forthStudent_instagramID.placeholder = "네 번째 멤버 인스타그램 아이디";
+forthStudent_instagramID.placeholder = "필수가 아닙니다!";
 forthStudent_instagramID.className = "GroupInput";
+let forthStudent_instagramID_div = document.createElement("div");
+let forthStudent_instagramID_p = document.createElement("p");
+forthStudent_instagramID_p.innerHTML = "19. 네 번째 멤버 인스타그램 아이디";
+forthStudent_instagramID_div.appendChild(forthStudent_instagramID_p);
+forthStudent_instagramID_div.appendChild(forthStudent_instagramID);
 
 let forthStudent_kakaoID = document.createElement("input");
 forthStudent_kakaoID.type = "text";
 forthStudent_kakaoID.name = "forthStudent_kakaoID";
-forthStudent_kakaoID.placeholder = "네 번째 멤버 카카오톡 아이디";
+forthStudent_kakaoID.required = true;
 forthStudent_kakaoID.className = "GroupInput";
+let forthStudent_kakaoID_div = document.createElement("div");
+let forthStudent_kakaoID_p = document.createElement("p");
+forthStudent_kakaoID_p.innerHTML = "20. 네 번째 멤버 카카오톡 아이디";
+forthStudent_kakaoID_div.appendChild(forthStudent_kakaoID_p);
+forthStudent_kakaoID_div.appendChild(forthStudent_kakaoID);
 
-forthStudent.appendChild(forthStudent_STnumber);
-forthStudent.appendChild(forthStudent_Name);
-forthStudent.appendChild(forthStudent_instagramID);
-forthStudent.appendChild(forthStudent_kakaoID);
+forthStudent.appendChild(forthStudent_STnumber_div);
+forthStudent.appendChild(forthStudent_Name_div);
+forthStudent.appendChild(forthStudent_instagramID_div);
+forthStudent.appendChild(forthStudent_kakaoID_div);
 
 function memberSelectFunction() {
   let selection = document.getElementById("memberSelect");
@@ -177,16 +217,13 @@ function memberSelectFunction() {
   } else if (selection.value == 4 && currentMember.value == 3) {
     additionalMember.appendChild(forthStudent);
   } else if (selection.value == 2 && currentMember.value == 3) {
-    additionalMember.removeChild("thirdStudent");
+    additionalMember.removeChild(thirdStudent);
   } else if (selection.value == 2 && currentMember.value == 4) {
-    additionalMember.removeChild("forthStudent");
-    additionalMember.removeChild("thirdStudent");
+    additionalMember.removeChild(forthStudent);
+    additionalMember.removeChild(thirdStudent);
   } else if (selection.value == 3 && currentMember.value == 4) {
-    additionalMember.removeChild("forthStudent");
+    additionalMember.removeChild(forthStudent);
   }
 
   currentMember.value = selection.value;
-
-  let defaultOption = document.getElementById("memberDefaultOption");
-  defaultOption.selected = true;
 }

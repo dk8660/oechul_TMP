@@ -48,11 +48,11 @@ export const groupMatching = async (request, response) => {
   }
 };
 
-export const getinfo = async (request, response) => {
+export const groupGetinfo = async (request, response) => {
   return response.render("groupGetinfo");
 };
 
-export const getinfo_process = async (request, response) => {
+export const groupGetinfo_process = async (request, response) => {
   try {
     const {
       STnumber,

@@ -14,6 +14,15 @@ import {
   reference,
   result,
 } from "../controllers/infoController";
+import {
+  groupMatching,
+  groupGetinfo,
+  groupGetinfo_process,
+  groupInfos,
+  groupMain,
+  groupDelete,
+  groupDelete_process,
+} from "../controllers/groupController";
 var indexRouter = express.Router();
 
 indexRouter.get("/", main);
@@ -35,5 +44,19 @@ indexRouter.post("/edit_process", edit_process);
 indexRouter.get("/reference", reference);
 
 indexRouter.post("/result", result);
+
+indexRouter.get("/groupInfos", groupInfos);
+
+indexRouter.get("/groupGetinfo", groupGetinfo);
+
+indexRouter.post("/groupGetinfo_process", groupGetinfo_process);
+
+indexRouter.get("/groupMatch", groupMatching);
+
+indexRouter.get("/group", groupMain);
+
+indexRouter.get("/groupDelete", groupDelete);
+
+indexRouter.post("/groupDelete_process", groupDelete_process);
 
 export default indexRouter;
