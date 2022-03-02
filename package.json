@@ -3,8 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www",
-    "dev": "nodemon --exec babel-node init.js"
+    "build:server": "babel src -d build",
+    "start": "node build/init.js",
+    "dev": "nodemon --exec babel-node src/init.js"
   },
   "dependencies": {
     "axios": "^0.21.1",
@@ -22,6 +23,7 @@
     "pug": "^3.0.2"
   },
   "devDependencies": {
+    "@babel/cli": "^7.17.6",
     "@babel/core": "^7.17.5",
     "@babel/node": "^7.14.7",
     "@babel/preset-env": "^7.16.11",
