@@ -3,10 +3,10 @@ import "regenerator-runtime";
 const db = require("./db");
 const app = require("./app");
 
-const port = 3000;
+const PORT = process.env.PORT || 3000;
 
 app.listen(port, () => {
-  console.log(`App listening at http://localhost:${port}`);
+  console.log(`App listening at http://localhost:${PORT}`);
 });
 
 // heroku test
